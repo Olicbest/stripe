@@ -33,7 +33,24 @@ export default function Navbar() {
               : "border-transparent bg-transparent"
           }`}
         >
-          <div className="text-lg font-semibold tracking-tight">BankApp</div>
+          <div className="flex items-center gap-3">
+            <div className="relative flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-200/20 bg-gradient-to-br from-cyan-200/20 via-[#8ea6ff]/16 to-emerald-200/14 shadow-lg shadow-cyan-950/30">
+              <div className="absolute inset-[6px] rounded-xl border border-white/10 bg-[#07101f]/80" />
+              <div className="relative h-4 w-4 overflow-hidden rounded-[0.45rem]">
+                <div className="absolute inset-y-0 left-0 w-[55%] rounded-[0.45rem] bg-gradient-to-b from-cyan-200 to-cyan-400" />
+                <div className="absolute inset-y-0 right-0 w-[45%] rounded-[0.45rem] bg-gradient-to-b from-[#b8c7ff] to-[#6e86ff]" />
+              </div>
+            </div>
+
+            <div className="leading-none">
+              <div className="text-[1.05rem] font-semibold tracking-[0.24em] text-white">
+                VERITI
+              </div>
+              <div className="mt-1 text-[0.6rem] uppercase tracking-[0.32em] text-cyan-100/55">
+                Treasury OS
+              </div>
+            </div>
+          </div>
 
           <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (

@@ -1,5 +1,11 @@
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Veriti",
+  description: "Premium banking infrastructure for modern teams.",
+};
 
 export default function RootLayout({
   children,

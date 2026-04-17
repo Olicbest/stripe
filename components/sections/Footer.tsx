@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
-            <div className="section-kicker">BankApp</div>
+            <div className="section-kicker">Veriti</div>
             <p className="mt-6 max-w-sm text-sm leading-7 text-white/60">
               Premium banking infrastructure for teams that want their tools to look calm, feel fast, and scale well.
             </p>
@@ -39,7 +39,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-6 md:flex-row">
           <p className="text-sm text-white/46">
-            (c) {new Date().getFullYear()} BankApp. All rights reserved.
+            (c) {new Date().getFullYear()} Veriti. All rights reserved.
           </p>
 
           <div className="flex items-center gap-3">

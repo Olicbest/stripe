@@ -84,12 +84,12 @@ export default function Pricing() {
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-cyan-200 to-white px-4 py-1 text-xs font-medium text-[#06111f]">
+                  <div className="absolute right-5 top-5 rounded-full bg-gradient-to-r from-cyan-200 to-white px-4 py-1 text-xs font-medium text-[#06111f] shadow-lg shadow-cyan-950/20">
                     Most Popular
                   </div>
                 )}
 
-                <div className="text-sm uppercase tracking-[0.18em] text-white/40">{plan.name}</div>
+                <div className={`text-sm uppercase tracking-[0.18em] text-white/40 ${plan.popular ? "pr-28" : ""}`}>{plan.name}</div>
                 <p className="mt-4 text-sm leading-7 text-white/65">{plan.description}</p>
 
                 <div className="mt-8 flex items-end gap-2">
