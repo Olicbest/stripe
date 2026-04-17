@@ -9,19 +9,22 @@ export default function SmoothScroll({
   children: React.ReactNode;
 }) {
   useEffect(() => {
+    // Avoid stacking multiple RAF loops in React Strict Mode during development.
     const lenis = new Lenis({
-      duration: 1.1,
+      duration: 0.8,
       easing: (t: number) => 1 - Math.pow(1 - t, 3),
     });
+    let frameId = 0;
 
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      frameId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    frameId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(frameId);
       lenis.destroy();
     };
   }, []);
